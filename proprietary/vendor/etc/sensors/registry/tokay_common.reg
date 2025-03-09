@@ -96,7 +96,7 @@
   intr_id=47
   min_period_us=25000
 +/dev/icp20100/0/baro
-  fac_cal_transform=1.0 -0.18619
+  fac_cal_transform=1.0 0.0174
   temp=28.87
   temp_sensitivity=-0.00175
 +/dev/icp20100/0/temp
