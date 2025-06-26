@@ -33,7 +33,7 @@ reg_script=tokay_dvt.reg
 
 # ALSP (TMD3733)
 +/dev/tmd3733/0
-  vsync_delay_ns=4300000
+  vsync_delay_ns=133334
 
 +/dev/tmd3733/0/als
   lux_scale=5.16396
@@ -92,7 +92,7 @@ reg_script=tokay_dvt.reg
   gain2=2.5
 
 +/dev/tmd3733/0/panel-b
-  vsync_delay_ns=4350000
+  vsync_delay_ns=183334
 
 +/dev/tmd3733/0/panel-b/als
   lux_scale=4.57118
