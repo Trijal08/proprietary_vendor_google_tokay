@@ -492,6 +492,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/tokay/proprietary/product/etc/firmware/music_detector.sound_model:$(TARGET_COPY_OUT_PRODUCT)/etc/firmware/music_detector.sound_model \
     vendor/google/tokay/proprietary/product/etc/firmware/music_detector.sound_model_2:$(TARGET_COPY_OUT_PRODUCT)/etc/firmware/music_detector.sound_model_2 \
     vendor/google/tokay/proprietary/product/etc/firmware/music_detector.sound_model_tflite:$(TARGET_COPY_OUT_PRODUCT)/etc/firmware/music_detector.sound_model_tflite \
+    vendor/google/tokay/proprietary/product/etc/libnfc-nci.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/libnfc-nci.conf \
     vendor/google/tokay/proprietary/product/etc/permissions/androidx.camera.extensions.impl.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/androidx.camera.extensions.impl.xml \
     vendor/google/tokay/proprietary/product/etc/permissions/com.android.omadm.service.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.android.omadm.service.xml \
     vendor/google/tokay/proprietary/product/etc/permissions/com.android.sdm.plugins.connmo.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.android.sdm.plugins.connmo.xml \
@@ -529,6 +530,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/tokay/proprietary/product/etc/sysconfig/pixel_experience_2024_midyear.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_experience_2024_midyear.xml \
     vendor/google/tokay/proprietary/product/etc/sysconfig/satellite_sos.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/satellite_sos.xml \
     vendor/google/tokay/proprietary/system_ext/etc/default-permissions/default-permissions-euiccpixel.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/default-permissions/default-permissions-euiccpixel.xml \
+    vendor/google/tokay/proprietary/system_ext/etc/init/init.gs_watchdogd.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.gs_watchdogd.rc \
     vendor/google/tokay/proprietary/system_ext/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc \
     vendor/google/tokay/proprietary/system_ext/etc/init/vendor.google.whitechapel.audio.hal.parserservice.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/vendor.google.whitechapel.audio.hal.parserservice.rc \
     vendor/google/tokay/proprietary/system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.hotwordenrollment.common.util.xml \
@@ -621,6 +623,7 @@ PRODUCT_PACKAGES += \
     oemrilhook \
     com.google.pixel.camera.services@1.0-service-google.xml \
     vendor.google.edgetpu_app_service@1.0-service.xml \
+    gs_watchdogd \
     vendor.google.edgetpu_app_service@1.0-service \
     vendor.google.whitechapel.audio.hal.parserservice
 
@@ -631,11 +634,47 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     vendor/google/tokay/proprietary/vendor/etc/Khronos/OpenCL/vendors/ARM.icd:$(TARGET_COPY_OUT_VENDOR)/etc/Khronos/OpenCL/vendors/ARM.icd \
+    vendor/google/tokay/proprietary/vendor/etc/aidl/le_audio/aidl_audio_set_configurations.json:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/le_audio/aidl_audio_set_configurations.json \
+    vendor/google/tokay/proprietary/vendor/etc/aidl/le_audio/aidl_audio_set_scenarios.json:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/le_audio/aidl_audio_set_scenarios.json \
+    vendor/google/tokay/proprietary/vendor/etc/aoc/BLUETOOTH.dat:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/BLUETOOTH.dat \
+    vendor/google/tokay/proprietary/vendor/etc/aoc/HANDSET.dat:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/HANDSET.dat \
+    vendor/google/tokay/proprietary/vendor/etc/aoc/HANDSFREE.dat:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/HANDSFREE.dat \
+    vendor/google/tokay/proprietary/vendor/etc/aoc/HEADSET.dat:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/HEADSET.dat \
+    vendor/google/tokay/proprietary/vendor/etc/aoc/downlink_bluetooth_headset_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/downlink_bluetooth_headset_config.pb \
+    vendor/google/tokay/proprietary/vendor/etc/aoc/downlink_dock_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/downlink_dock_config.pb \
+    vendor/google/tokay/proprietary/vendor/etc/aoc/downlink_external_speaker_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/downlink_external_speaker_config.pb \
+    vendor/google/tokay/proprietary/vendor/etc/aoc/downlink_handset_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/downlink_handset_config.pb \
+    vendor/google/tokay/proprietary/vendor/etc/aoc/downlink_speaker_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/downlink_speaker_config.pb \
+    vendor/google/tokay/proprietary/vendor/etc/aoc/downlink_wired_headset_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/downlink_wired_headset_config.pb \
+    vendor/google/tokay/proprietary/vendor/etc/aoc/mcps.dat:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/mcps.dat \
+    vendor/google/tokay/proprietary/vendor/etc/aoc/recording.gatf:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/recording.gatf \
+    vendor/google/tokay/proprietary/vendor/etc/aoc/smartfeature.gstf:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/smartfeature.gstf \
+    vendor/google/tokay/proprietary/vendor/etc/aoc/uplink_bluetooth_headset_aec_off_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/uplink_bluetooth_headset_aec_off_config.pb \
+    vendor/google/tokay/proprietary/vendor/etc/aoc/uplink_bluetooth_headset_aec_on_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/uplink_bluetooth_headset_aec_on_config.pb \
+    vendor/google/tokay/proprietary/vendor/etc/aoc/uplink_dock_aec_off_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/uplink_dock_aec_off_config.pb \
+    vendor/google/tokay/proprietary/vendor/etc/aoc/uplink_dock_aec_on_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/uplink_dock_aec_on_config.pb \
+    vendor/google/tokay/proprietary/vendor/etc/aoc/uplink_external_speaker_aec_off_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/uplink_external_speaker_aec_off_config.pb \
+    vendor/google/tokay/proprietary/vendor/etc/aoc/uplink_external_speaker_aec_on_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/uplink_external_speaker_aec_on_config.pb \
+    vendor/google/tokay/proprietary/vendor/etc/aoc/uplink_handset_aec_off_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/uplink_handset_aec_off_config.pb \
+    vendor/google/tokay/proprietary/vendor/etc/aoc/uplink_handset_aec_on_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/uplink_handset_aec_on_config.pb \
+    vendor/google/tokay/proprietary/vendor/etc/aoc/uplink_speaker_aec_off_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/uplink_speaker_aec_off_config.pb \
+    vendor/google/tokay/proprietary/vendor/etc/aoc/uplink_speaker_aec_on_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/uplink_speaker_aec_on_config.pb \
+    vendor/google/tokay/proprietary/vendor/etc/aoc/uplink_wired_headset_aec_off_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/uplink_wired_headset_aec_off_config.pb \
+    vendor/google/tokay/proprietary/vendor/etc/aoc/uplink_wired_headset_aec_on_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/uplink_wired_headset_aec_on_config.pb \
     vendor/google/tokay/proprietary/vendor/etc/atc_profile.json:$(TARGET_COPY_OUT_VENDOR)/etc/atc_profile.json \
+    vendor/google/tokay/proprietary/vendor/etc/audio_platform_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_configuration.xml \
+    vendor/google/tokay/proprietary/vendor/etc/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     vendor/google/tokay/proprietary/vendor/etc/bluetooth/bluetooth_channel_sounding_calibration.json:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bluetooth_channel_sounding_calibration.json \
     vendor/google/tokay/proprietary/vendor/etc/bluetooth/bt_vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor.conf \
+    vendor/google/tokay/proprietary/vendor/etc/bluetooth/bt_vendor_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor_overlay.conf \
     vendor/google/tokay/proprietary/vendor/etc/bluetooth/firmware_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/firmware_config.json \
     vendor/google/tokay/proprietary/vendor/etc/bluetooth/hal_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/hal_config.json \
+    vendor/google/tokay/proprietary/vendor/etc/bluetooth_power_limits.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits.csv \
+    vendor/google/tokay/proprietary/vendor/etc/bluetooth_power_limits_CA.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_CA.csv \
+    vendor/google/tokay/proprietary/vendor/etc/bluetooth_power_limits_EU.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_EU.csv \
+    vendor/google/tokay/proprietary/vendor/etc/bluetooth_power_limits_JP.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_JP.csv \
+    vendor/google/tokay/proprietary/vendor/etc/bluetooth_power_limits_US.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_US.csv \
+    vendor/google/tokay/proprietary/vendor/etc/bm_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/bm_config.json \
     vendor/google/tokay/proprietary/vendor/etc/chre/activity.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/activity.napp_header \
     vendor/google/tokay/proprietary/vendor/etc/chre/activity.so:$(TARGET_COPY_OUT_VENDOR)/etc/chre/activity.so \
     vendor/google/tokay/proprietary/vendor/etc/chre/aidb_recorder.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/aidb_recorder.napp_header \
@@ -687,6 +726,8 @@ PRODUCT_COPY_FILES += \
     vendor/google/tokay/proprietary/vendor/etc/chre/vice.so:$(TARGET_COPY_OUT_VENDOR)/etc/chre/vice.so \
     vendor/google/tokay/proprietary/vendor/etc/chre/wallaby.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/wallaby.napp_header \
     vendor/google/tokay/proprietary/vendor/etc/chre/wallaby.so:$(TARGET_COPY_OUT_VENDOR)/etc/chre/wallaby.so \
+    vendor/google/tokay/proprietary/vendor/etc/compens_spk_l.conf:$(TARGET_COPY_OUT_VENDOR)/etc/compens_spk_l.conf \
+    vendor/google/tokay/proprietary/vendor/etc/compens_spk_r.conf:$(TARGET_COPY_OUT_VENDOR)/etc/compens_spk_r.conf \
     vendor/google/tokay/proprietary/vendor/etc/database/DbEcc_202.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_202.xml \
     vendor/google/tokay/proprietary/vendor/etc/database/DbEcc_204.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_204.xml \
     vendor/google/tokay/proprietary/vendor/etc/database/DbEcc_206.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_206.xml \
@@ -755,6 +796,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/tokay/proprietary/vendor/etc/database/DbEcc_DEFAULT.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_DEFAULT.xml \
     vendor/google/tokay/proprietary/vendor/etc/database/DbEcc_ICCID.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_ICCID.xml \
     vendor/google/tokay/proprietary/vendor/etc/database/ecc_version:$(TARGET_COPY_OUT_VENDOR)/etc/database/ecc_version \
+    vendor/google/tokay/proprietary/vendor/etc/default_mic_compensation.bin:$(TARGET_COPY_OUT_VENDOR)/etc/default_mic_compensation.bin \
     vendor/google/tokay/proprietary/vendor/etc/display_colordata_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/display_colordata_cal0.pb \
     vendor/google/tokay/proprietary/vendor/etc/display_colordata_google-tk4a_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/display_colordata_google-tk4a_cal0.pb \
     vendor/google/tokay/proprietary/vendor/etc/display_colordata_google-tk4b_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/display_colordata_google-tk4b_cal0.pb \
@@ -764,20 +806,28 @@ PRODUCT_COPY_FILES += \
     vendor/google/tokay/proprietary/vendor/etc/display_golden_google-tk4c_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/display_golden_google-tk4c_cal0.pb \
     vendor/google/tokay/proprietary/vendor/etc/displayconfig/display_port_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_port_0.xml \
     vendor/google/tokay/proprietary/vendor/etc/earcheek_classifier.tflite:$(TARGET_COPY_OUT_VENDOR)/etc/earcheek_classifier.tflite \
+    vendor/google/tokay/proprietary/vendor/etc/fstab.efs:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.efs \
+    vendor/google/tokay/proprietary/vendor/etc/fstab.efs.from_data:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.efs.from_data \
+    vendor/google/tokay/proprietary/vendor/etc/fstab.modem:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.modem \
+    vendor/google/tokay/proprietary/vendor/etc/fstab.persist:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.persist \
     vendor/google/tokay/proprietary/vendor/etc/ggauge.ini:$(TARGET_COPY_OUT_VENDOR)/etc/ggauge.ini \
     vendor/google/tokay/proprietary/vendor/etc/gnss/ca.pem:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/ca.pem \
+    vendor/google/tokay/proprietary/vendor/etc/gnss/gps.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.cfg \
+    vendor/google/tokay/proprietary/vendor/etc/init.common.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/init.common.cfg \
     vendor/google/tokay/proprietary/vendor/etc/init/Exynos_C2.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/Exynos_C2.rc \
     vendor/google/tokay/proprietary/vendor/etc/init/android.hardware.audio.service-aidl.aoc.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.audio.service-aidl.aoc.rc \
     vendor/google/tokay/proprietary/vendor/etc/init/android.hardware.authsecret-service.citadel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.authsecret-service.citadel.rc \
     vendor/google/tokay/proprietary/vendor/etc/init/android.hardware.bluetooth-service.bcmbtlinux.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth-service.bcmbtlinux.rc \
     vendor/google/tokay/proprietary/vendor/etc/init/android.hardware.camera.provider@2.7-service-google-apex.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.camera.provider@2.7-service-google-apex.rc \
     vendor/google/tokay/proprietary/vendor/etc/init/android.hardware.contexthub-service.generic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.contexthub-service.generic.rc \
+    vendor/google/tokay/proprietary/vendor/etc/init/android.hardware.dumpstate-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.dumpstate-service.rc \
     vendor/google/tokay/proprietary/vendor/etc/init/android.hardware.edgetpu.logging@service-edgetpu-logging.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.edgetpu.logging@service-edgetpu-logging.rc \
     vendor/google/tokay/proprietary/vendor/etc/init/android.hardware.graphics.allocator2-aidl-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.allocator2-aidl-service.rc \
     vendor/google/tokay/proprietary/vendor/etc/init/android.hardware.gxp.logging@service-gxp-logging.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gxp.logging@service-gxp-logging.rc \
     vendor/google/tokay/proprietary/vendor/etc/init/android.hardware.input.processor-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.input.processor-service.rc \
     vendor/google/tokay/proprietary/vendor/etc/init/android.hardware.neuralnetworks@service-darwinn-aidl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks@service-darwinn-aidl.rc \
     vendor/google/tokay/proprietary/vendor/etc/init/android.hardware.oemlock-service.citadel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.oemlock-service.citadel.rc \
+    vendor/google/tokay/proprietary/vendor/etc/init/android.hardware.power.stats-service.pixel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.power.stats-service.pixel.rc \
     vendor/google/tokay/proprietary/vendor/etc/init/android.hardware.secure_element-service.uicc.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.secure_element-service.uicc.rc \
     vendor/google/tokay/proprietary/vendor/etc/init/android.hardware.security.keymint-service.citadel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.security.keymint-service.citadel.rc \
     vendor/google/tokay/proprietary/vendor/etc/init/android.hardware.vibrator-service.cs40l26.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.vibrator-service.cs40l26.rc \
@@ -790,19 +840,39 @@ PRODUCT_COPY_FILES += \
     vendor/google/tokay/proprietary/vendor/etc/init/com.google.edgetpu.tachyon-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/com.google.edgetpu.tachyon-service.rc \
     vendor/google/tokay/proprietary/vendor/etc/init/com.google.input.gia.giacore.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/com.google.input.gia.giacore.rc \
     vendor/google/tokay/proprietary/vendor/etc/init/dmd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dmd.rc \
+    vendor/google/tokay/proprietary/vendor/etc/init/dump_power.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dump_power.rc \
     vendor/google/tokay/proprietary/vendor/etc/init/google.hardware.media.c2@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/google.hardware.media.c2@2.0-service.rc \
+    vendor/google/tokay/proprietary/vendor/etc/init/hw/init.persist.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.persist.rc \
+    vendor/google/tokay/proprietary/vendor/etc/init/hw/init.tokay.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.tokay.rc \
+    vendor/google/tokay/proprietary/vendor/etc/init/hw/init.zumapro.board.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.zumapro.board.rc \
+    vendor/google/tokay/proprietary/vendor/etc/init/hw/init.zumapro.soc.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.zumapro.soc.rc \
+    vendor/google/tokay/proprietary/vendor/etc/init/hw/init.zumapro.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.zumapro.usb.rc \
     vendor/google/tokay/proprietary/vendor/etc/init/hwc3-pixel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hwc3-pixel.rc \
+    vendor/google/tokay/proprietary/vendor/etc/init/init.aoc.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.aoc.rc \
     vendor/google/tokay/proprietary/vendor/etc/init/init.camera.set-interrupts-ownership.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.camera.set-interrupts-ownership.rc \
+    vendor/google/tokay/proprietary/vendor/etc/init/init.display_logbuffer.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.display_logbuffer.rc \
+    vendor/google/tokay/proprietary/vendor/etc/init/init.fingerprint.dump.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.fingerprint.dump.rc \
     vendor/google/tokay/proprietary/vendor/etc/init/init.gnss.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.gnss.rc \
     vendor/google/tokay/proprietary/vendor/etc/init/init.liboemservice_proxy.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.liboemservice_proxy.rc \
     vendor/google/tokay/proprietary/vendor/etc/init/init.modem_logging_control.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.modem_logging_control.rc \
+    vendor/google/tokay/proprietary/vendor/etc/init/init.module.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.module.rc \
+    vendor/google/tokay/proprietary/vendor/etc/init/init.pixel-mm-gs.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.pixel-mm-gs.rc \
+    vendor/google/tokay/proprietary/vendor/etc/init/init.pixel-perf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.pixel-perf.rc \
+    vendor/google/tokay/proprietary/vendor/etc/init/init.power-gs.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.power-gs.rc \
     vendor/google/tokay/proprietary/vendor/etc/init/init.shared_modem_platform_l.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.shared_modem_platform_l.rc \
     vendor/google/tokay/proprietary/vendor/etc/init/init.sscoredump.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.sscoredump.rc \
+    vendor/google/tokay/proprietary/vendor/etc/init/init.storage.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.storage.rc \
+    vendor/google/tokay/proprietary/vendor/etc/init/init.touch.gti0.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.touch.gti0.rc \
+    vendor/google/tokay/proprietary/vendor/etc/init/init.touch.predump.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.touch.predump.rc \
     vendor/google/tokay/proprietary/vendor/etc/init/init.usf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.usf.rc \
     vendor/google/tokay/proprietary/vendor/etc/init/init.vendor_telephony.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor_telephony.rc \
     vendor/google/tokay/proprietary/vendor/etc/init/init_dauntless.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init_dauntless.rc \
+    vendor/google/tokay/proprietary/vendor/etc/init/libg3a_gabc.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/libg3a_gabc.rc \
+    vendor/google/tokay/proprietary/vendor/etc/init/libg3a_gaf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/libg3a_gaf.rc \
+    vendor/google/tokay/proprietary/vendor/etc/init/libg3a_ghawb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/libg3a_ghawb.rc \
     vendor/google/tokay/proprietary/vendor/etc/init/memtrack.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/memtrack.rc \
     vendor/google/tokay/proprietary/vendor/etc/init/pcie_power.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pcie_power.rc \
+    vendor/google/tokay/proprietary/vendor/etc/init/pixel-experiments-recovery.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pixel-experiments-recovery.rc \
     vendor/google/tokay/proprietary/vendor/etc/init/pixel-gnss-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pixel-gnss-default.rc \
     vendor/google/tokay/proprietary/vendor/etc/init/pixelstats-vendor.zumapro.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pixelstats-vendor.zumapro.rc \
     vendor/google/tokay/proprietary/vendor/etc/init/pktrouter.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pktrouter.rc \
@@ -824,10 +894,35 @@ PRODUCT_COPY_FILES += \
     vendor/google/tokay/proprietary/vendor/etc/init/vendor.google.wireless_charger-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.google.wireless_charger-default.rc \
     vendor/google/tokay/proprietary/vendor/etc/init/vendor.google.wireless_charger.service-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.google.wireless_charger.service-default.rc \
     vendor/google/tokay/proprietary/vendor/etc/input_classifier_model.pb:$(TARGET_COPY_OUT_VENDOR)/etc/input_classifier_model.pb \
+    vendor/google/tokay/proprietary/vendor/etc/le_audio_codec_capabilities.xml:$(TARGET_COPY_OUT_VENDOR)/etc/le_audio_codec_capabilities.xml \
+    vendor/google/tokay/proprietary/vendor/etc/libg3a_standalone_gabc_rc:$(TARGET_COPY_OUT_VENDOR)/etc/libg3a_standalone_gabc_rc \
+    vendor/google/tokay/proprietary/vendor/etc/libg3a_standalone_gaf_rc:$(TARGET_COPY_OUT_VENDOR)/etc/libg3a_standalone_gaf_rc \
+    vendor/google/tokay/proprietary/vendor/etc/libg3a_standalone_ghawb_rc:$(TARGET_COPY_OUT_VENDOR)/etc/libg3a_standalone_ghawb_rc \
+    vendor/google/tokay/proprietary/vendor/etc/libnfc-hal-st.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-hal-st.conf \
+    vendor/google/tokay/proprietary/vendor/etc/libse-gto-hal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libse-gto-hal.conf \
+    vendor/google/tokay/proprietary/vendor/etc/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     vendor/google/tokay/proprietary/vendor/etc/media_codecs_aosp_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_aosp_c2.xml \
+    vendor/google/tokay/proprietary/vendor/etc/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
     vendor/google/tokay/proprietary/vendor/etc/media_codecs_dolby_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_c2.xml \
+    vendor/google/tokay/proprietary/vendor/etc/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
+    vendor/google/tokay/proprietary/vendor/etc/media_codecs_performance_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_c2.xml \
     vendor/google/tokay/proprietary/vendor/etc/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
     vendor/google/tokay/proprietary/vendor/etc/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
+    vendor/google/tokay/proprietary/vendor/etc/modem/Pixel_stability.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/modem/Pixel_stability.cfg \
+    vendor/google/tokay/proprietary/vendor/etc/modem/Pixel_stability.nprf:$(TARGET_COPY_OUT_VENDOR)/etc/modem/Pixel_stability.nprf \
+    vendor/google/tokay/proprietary/vendor/etc/modem/camera_front_dbr_coex_table.csv:$(TARGET_COPY_OUT_VENDOR)/etc/modem/camera_front_dbr_coex_table.csv \
+    vendor/google/tokay/proprietary/vendor/etc/modem/camera_front_mipi_coex_table.csv:$(TARGET_COPY_OUT_VENDOR)/etc/modem/camera_front_mipi_coex_table.csv \
+    vendor/google/tokay/proprietary/vendor/etc/modem/camera_rear_main_mipi_coex_table.csv:$(TARGET_COPY_OUT_VENDOR)/etc/modem/camera_rear_main_mipi_coex_table.csv \
+    vendor/google/tokay/proprietary/vendor/etc/modem/camera_rear_wide_mipi_coex_table.csv:$(TARGET_COPY_OUT_VENDOR)/etc/modem/camera_rear_wide_mipi_coex_table.csv \
+    vendor/google/tokay/proprietary/vendor/etc/modem/default.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/modem/default.cfg \
+    vendor/google/tokay/proprietary/vendor/etc/modem/default.nprf:$(TARGET_COPY_OUT_VENDOR)/etc/modem/default.nprf \
+    vendor/google/tokay/proprietary/vendor/etc/modem/default_metrics.xml:$(TARGET_COPY_OUT_VENDOR)/etc/modem/default_metrics.xml \
+    vendor/google/tokay/proprietary/vendor/etc/modem/display_primary_mipi_coex_table.csv:$(TARGET_COPY_OUT_VENDOR)/etc/modem/display_primary_mipi_coex_table.csv \
+    vendor/google/tokay/proprietary/vendor/etc/modem/display_primary_ssc_coex_table.csv:$(TARGET_COPY_OUT_VENDOR)/etc/modem/display_primary_ssc_coex_table.csv \
+    vendor/google/tokay/proprietary/vendor/etc/modem/extensive_logging.conf:$(TARGET_COPY_OUT_VENDOR)/etc/modem/extensive_logging.conf \
+    vendor/google/tokay/proprietary/vendor/etc/modem/logging.conf:$(TARGET_COPY_OUT_VENDOR)/etc/modem/logging.conf \
+    vendor/google/tokay/proprietary/vendor/etc/modem_ml_models.conf:$(TARGET_COPY_OUT_VENDOR)/etc/modem_ml_models.conf \
+    vendor/google/tokay/proprietary/vendor/etc/modem_ml_tflite_models.conf:$(TARGET_COPY_OUT_VENDOR)/etc/modem_ml_tflite_models.conf \
     vendor/google/tokay/proprietary/vendor/etc/modem_stat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/modem_stat.conf \
     vendor/google/tokay/proprietary/vendor/etc/open_carrier_info.dat:$(TARGET_COPY_OUT_VENDOR)/etc/open_carrier_info.dat \
     vendor/google/tokay/proprietary/vendor/etc/panel_config_google-tk4a_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/panel_config_google-tk4a_cal0.pb \
@@ -838,7 +933,10 @@ PRODUCT_COPY_FILES += \
     vendor/google/tokay/proprietary/vendor/etc/permissions/android.hardware.telephony.ims.singlereg.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.singlereg.xml \
     vendor/google/tokay/proprietary/vendor/etc/permissions/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml \
     vendor/google/tokay/proprietary/vendor/etc/permissions/com.google.android.camera.experimental2024.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.google.android.camera.experimental2024.xml \
+    vendor/google/tokay/proprietary/vendor/etc/permissions/vendor.android.hardware.camera.preview-dis.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vendor.android.hardware.camera.preview-dis.xml \
     vendor/google/tokay/proprietary/vendor/etc/pixelstats_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/pixelstats_config.json \
+    vendor/google/tokay/proprietary/vendor/etc/powerhint-proto.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint-proto.json \
+    vendor/google/tokay/proprietary/vendor/etc/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json \
     vendor/google/tokay/proprietary/vendor/etc/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt \
     vendor/google/tokay/proprietary/vendor/etc/seccomp_policy/codec2.vendor.base.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.base.policy \
     vendor/google/tokay/proprietary/vendor/etc/seccomp_policy/codec2.vendor.ext.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.ext.policy \
@@ -851,14 +949,36 @@ PRODUCT_COPY_FILES += \
     vendor/google/tokay/proprietary/vendor/etc/sensors/registry/tokay_evt_1_0.reg:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/registry/tokay_evt_1_0.reg \
     vendor/google/tokay/proprietary/vendor/etc/sensors/registry/tokay_evt_1_1.reg:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/registry/tokay_evt_1_1.reg \
     vendor/google/tokay/proprietary/vendor/etc/sensors/registry/tokay_proto.reg:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/registry/tokay_proto.reg \
+    vendor/google/tokay/proprietary/vendor/etc/spatializer/base:$(TARGET_COPY_OUT_VENDOR)/etc/spatializer/base \
+    vendor/google/tokay/proprietary/vendor/etc/spatializer/mode_2_ch:$(TARGET_COPY_OUT_VENDOR)/etc/spatializer/mode_2_ch \
+    vendor/google/tokay/proprietary/vendor/etc/spatializer/mode_6_ch:$(TARGET_COPY_OUT_VENDOR)/etc/spatializer/mode_6_ch \
+    vendor/google/tokay/proprietary/vendor/etc/spatializer/mode_xaural:$(TARGET_COPY_OUT_VENDOR)/etc/spatializer/mode_xaural \
+    vendor/google/tokay/proprietary/vendor/etc/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json \
     vendor/google/tokay/proprietary/vendor/etc/tcm_test_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/tcm_test_cfg.ini \
     vendor/google/tokay/proprietary/vendor/etc/tcm_test_cfg_b.ini:$(TARGET_COPY_OUT_VENDOR)/etc/tcm_test_cfg_b.ini \
+    vendor/google/tokay/proprietary/vendor/etc/telephony/satellite_access_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/telephony/satellite_access_config.json \
+    vendor/google/tokay/proprietary/vendor/etc/telephony/sats2.dat:$(TARGET_COPY_OUT_VENDOR)/etc/telephony/sats2.dat \
+    vendor/google/tokay/proprietary/vendor/etc/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json \
+    vendor/google/tokay/proprietary/vendor/etc/thermal_info_config_charge.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_charge.json \
+    vendor/google/tokay/proprietary/vendor/etc/thermal_info_config_lpm.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_lpm.json \
+    vendor/google/tokay/proprietary/vendor/etc/thermal_info_config_proto.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_proto.json \
     vendor/google/tokay/proprietary/vendor/etc/touchflow.pb:$(TARGET_COPY_OUT_VENDOR)/etc/touchflow.pb \
     vendor/google/tokay/proprietary/vendor/etc/twoshay_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/twoshay_config.json \
+    vendor/google/tokay/proprietary/vendor/etc/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc \
+    vendor/google/tokay/proprietary/vendor/etc/vt_estimation_model.tflite:$(TARGET_COPY_OUT_VENDOR)/etc/vt_estimation_model.tflite \
+    vendor/google/tokay/proprietary/vendor/etc/vt_prediction_lstm_model.tflite:$(TARGET_COPY_OUT_VENDOR)/etc/vt_prediction_lstm_model.tflite \
+    vendor/google/tokay/proprietary/vendor/etc/waves_config.ini:$(TARGET_COPY_OUT_VENDOR)/etc/waves_config.ini \
+    vendor/google/tokay/proprietary/vendor/etc/waves_preset.mps:$(TARGET_COPY_OUT_VENDOR)/etc/waves_preset.mps \
+    vendor/google/tokay/proprietary/vendor/etc/wifi/coex_table.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/coex_table.xml \
+    vendor/google/tokay/proprietary/vendor/etc/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
+    vendor/google/tokay/proprietary/vendor/etc/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     vendor/google/tokay/proprietary/vendor/firmware/KIOXIATHGJFJT1E45BATPC0100.img:$(TARGET_COPY_OUT_VENDOR)/firmware/KIOXIATHGJFJT1E45BATPC0100.img \
     vendor/google/tokay/proprietary/vendor/firmware/KIOXIATHGJFJT2T85BAT0C0100.img:$(TARGET_COPY_OUT_VENDOR)/firmware/KIOXIATHGJFJT2T85BAT0C0100.img \
     vendor/google/tokay/proprietary/vendor/firmware/MICRONMT128GBCAV2U310103.img:$(TARGET_COPY_OUT_VENDOR)/firmware/MICRONMT128GBCAV2U310103.img \
     vendor/google/tokay/proprietary/vendor/firmware/MICRONMT128GBCAV2U310104.img:$(TARGET_COPY_OUT_VENDOR)/firmware/MICRONMT128GBCAV2U310104.img \
+    vendor/google/tokay/proprietary/vendor/firmware/R-cs35l41-dsp1-spk-cali.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/R-cs35l41-dsp1-spk-cali.bin \
+    vendor/google/tokay/proprietary/vendor/firmware/R-cs35l41-dsp1-spk-diag.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/R-cs35l41-dsp1-spk-diag.bin \
+    vendor/google/tokay/proprietary/vendor/firmware/R-cs35l41-dsp1-spk-prot.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/R-cs35l41-dsp1-spk-prot.bin \
     vendor/google/tokay/proprietary/vendor/firmware/SAMSUNGKLUDG4UHGC-B0E13103.img:$(TARGET_COPY_OUT_VENDOR)/firmware/SAMSUNGKLUDG4UHGC-B0E13103.img \
     vendor/google/tokay/proprietary/vendor/firmware/aoc.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/aoc.bin \
     vendor/google/tokay/proprietary/vendor/firmware/batt_fw_adi_79_2.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/batt_fw_adi_79_2.bin \
@@ -2109,6 +2229,12 @@ PRODUCT_COPY_FILES += \
     vendor/google/tokay/proprietary/vendor/firmware/carrierconfig/manifests/fdd9e943e070a03a7aa5505381aa9f2284b65669:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/fdd9e943e070a03a7aa5505381aa9f2284b65669 \
     vendor/google/tokay/proprietary/vendor/firmware/carrierconfig/manifests/ff964f285bc45e8e1e755b6c94db32092d77382b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/ff964f285bc45e8e1e755b6c94db32092d77382b \
     vendor/google/tokay/proprietary/vendor/firmware/carrierconfig/release-label:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/release-label \
+    vendor/google/tokay/proprietary/vendor/firmware/cs35l41-dsp1-spk-cali.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-dsp1-spk-cali.bin \
+    vendor/google/tokay/proprietary/vendor/firmware/cs35l41-dsp1-spk-cali.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-dsp1-spk-cali.wmfw \
+    vendor/google/tokay/proprietary/vendor/firmware/cs35l41-dsp1-spk-diag.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-dsp1-spk-diag.bin \
+    vendor/google/tokay/proprietary/vendor/firmware/cs35l41-dsp1-spk-diag.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-dsp1-spk-diag.wmfw \
+    vendor/google/tokay/proprietary/vendor/firmware/cs35l41-dsp1-spk-prot.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-dsp1-spk-prot.bin \
+    vendor/google/tokay/proprietary/vendor/firmware/cs35l41-dsp1-spk-prot.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-dsp1-spk-prot.wmfw \
     vendor/google/tokay/proprietary/vendor/firmware/cs40l26-calib.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs40l26-calib.bin \
     vendor/google/tokay/proprietary/vendor/firmware/cs40l26-calib.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs40l26-calib.wmfw \
     vendor/google/tokay/proprietary/vendor/firmware/cs40l26-dbc.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs40l26-dbc.bin \
@@ -3472,6 +3598,8 @@ PRODUCT_PACKAGES += \
     PixelVibratorFlagsL26 \
     android.hardware.authsecret-impl.nos \
     android.hardware.oemlock-impl.nos \
+    android.hardware.power.stats-impl.gs-common \
+    android.hardware.power.stats-impl.zumapro \
     android.hardware.security.keymint-impl.nos \
     android.hardware.weaver-bridge.nos \
     android.hardware.weaver-impl.nos \
@@ -3531,6 +3659,7 @@ PRODUCT_PACKAGES += \
     libdisplaycolor \
     libdisplaypanel \
     libdrmresource \
+    libdump \
     libedgetpu_client.google \
     libedgetpu_litert \
     libedgetpu_tachyon.google \
@@ -3591,6 +3720,12 @@ PRODUCT_PACKAGES += \
     libutils-default \
     libvendorgraphicbuffer \
     libwlcproto_aidl-default \
+    modem_android_property_manager \
+    modem_android_property_manager_impl \
+    modem_clock_manager \
+    modem_clock_manager_impl \
+    modem_log_constants \
+    modem_log_dumper \
     modem_ml_pw_rpc_gen \
     modemml-tflite-service-aidl-V1-ndk \
     sensors.usf \
@@ -3636,6 +3771,7 @@ PRODUCT_PACKAGES += \
     android.hardware.authsecret-service.citadel.xml \
     android.hardware.camera.provider@2.7-service-google-apex.xml \
     android.hardware.contexthub-service.generic.xml \
+    android.hardware.dumpstate-service.xml \
     android.hardware.gnss@lassen.xml \
     android.hardware.neuralnetworks@service-darwinn-aidl.xml \
     android.hardware.oemlock-service.citadel.xml \
@@ -3667,14 +3803,34 @@ PRODUCT_PACKAGES += \
     aocxd \
     bipchmgr \
     cbd \
+    copy_efs_files_to_data \
     dmd \
+    dump_aoc \
+    dump_devfreq \
+    dump_display_logbuffer \
+    dump_exynos_display \
+    dump_fingerprint \
+    dump_gsc \
+    dump_modemlog \
+    dump_pcie \
+    dump_perf \
+    dump_pixel_metrics \
+    dump_power \
+    dump_sensors \
+    dump_soc \
+    dump_storage \
+    dump_thermal \
+    dump_touch \
     dump_tpu \
+    dump_trusty \
+    predump_gti0 \
     gia \
     android.hardware.audio.service-aidl.aoc \
     android.hardware.authsecret-service.citadel \
     android.hardware.bluetooth-service.bcmbtlinux \
     android.hardware.composer.hwc3-service.pixel \
     android.hardware.contexthub-service.generic \
+    android.hardware.dumpstate-service \
     android.hardware.edgetpu.logging@service-edgetpu-logging \
     android.hardware.gnss-service \
     android.hardware.gnss-service.pixel \
@@ -3684,6 +3840,7 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack-service.pixel \
     android.hardware.neuralnetworks@service-darwinn-aidl \
     android.hardware.oemlock-service.citadel \
+    android.hardware.power.stats-service.pixel \
     android.hardware.secure_element-service.uicc \
     android.hardware.security.keymint-service.citadel \
     android.hardware.vibrator-service.cs40l26 \
@@ -3692,6 +3849,7 @@ PRODUCT_PACKAGES += \
     citadel_updater \
     citadeld \
     com.google.edgetpu.tachyon-service \
+    disable_contaminant_detection \
     gnss_test \
     gnssd \
     google.hardware.media.c2@2.0-service \
@@ -3709,16 +3867,20 @@ PRODUCT_PACKAGES += \
     vendor.google.wireless_charger.service-default \
     init.camera.set-interrupts-ownership \
     init.radio \
+    insmod \
     liboemservice_proxy_default \
     modem_logging_control \
     modem_ml_svc_sit \
     pcie_power_control \
+    pixel-experiments-recovery \
     pixelstats-vendor \
+    predump_touch \
     rfsd \
     shamp \
     shared_modem_platform \
     sscoredump \
     storage_init \
+    touch_gti_ical \
     trusty_metricsd \
     twoshay \
     usf_stats \
