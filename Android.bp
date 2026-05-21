@@ -275,18 +275,18 @@ android_app_import {
     product_specific: true,
 }
 
-android_app_import {
-    name: "AICorePrebuilt-aicore_20250130.00_RC01",
-    owner: "google",
-    apk: "proprietary/product/priv-app/AICorePrebuilt-aicore_20250130.00_RC01/AICorePrebuilt-aicore_20250130.00_RC01.apk",
-    preprocessed: true,
-    presigned: true,
-    dex_preopt: {
-        enabled: false,
-    },
-    privileged: true,
-    product_specific: true,
-}
+// android_app_import {
+//     name: "AICorePrebuilt-aicore_20250130.00_RC01",
+//     owner: "google",
+//     apk: "proprietary/product/priv-app/AICorePrebuilt-aicore_20250130.00_RC01/AICorePrebuilt-aicore_20250130.00_RC01.apk",
+//     preprocessed: true,
+//     presigned: true,
+//     dex_preopt: {
+//         enabled: false,
+//     },
+//     privileged: true,
+//     product_specific: true,
+// }
 
 android_app_import {
     name: "AppDirectedSMSService",
@@ -301,18 +301,18 @@ android_app_import {
     product_specific: true,
 }
 
-android_app_import {
-    name: "CarrierSettings",
-    owner: "google",
-    apk: "proprietary/product/priv-app/CarrierSettings/CarrierSettings.apk",
-    preprocessed: true,
-    presigned: true,
-    dex_preopt: {
-        enabled: false,
-    },
-    privileged: true,
-    product_specific: true,
-}
+// android_app_import {
+//     name: "CarrierSettings",
+//     owner: "google",
+//     apk: "proprietary/product/priv-app/CarrierSettings/CarrierSettings.apk",
+//     preprocessed: true,
+//     presigned: true,
+//     dex_preopt: {
+//         enabled: false,
+//     },
+//     privileged: true,
+//     product_specific: true,
+// }
 
 android_app_import {
     name: "CarrierWifi",
@@ -503,18 +503,18 @@ android_app_import {
     product_specific: true,
 }
 
-android_app_import {
-    name: "WfcActivation",
-    owner: "google",
-    apk: "proprietary/product/priv-app/WfcActivation/WfcActivation.apk",
-    preprocessed: true,
-    presigned: true,
-    dex_preopt: {
-        enabled: false,
-    },
-    privileged: true,
-    product_specific: true,
-}
+// android_app_import {
+//     name: "WfcActivation",
+//     owner: "google",
+//     apk: "proprietary/product/priv-app/WfcActivation/WfcActivation.apk",
+//     preprocessed: true,
+//     presigned: true,
+//     dex_preopt: {
+//         enabled: false,
+//     },
+//     privileged: true,
+//     product_specific: true,
+// }
 
 android_app_import {
     name: "OemRilHookService",
