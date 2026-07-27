@@ -399,18 +399,18 @@ android_app_import {
     product_specific: true,
 }
 
-android_app_import {
-    name: "DeviceIntelligenceNetworkPrebuiltAstrea",
-    owner: "google",
-    apk: "proprietary/product/priv-app/DeviceIntelligenceNetworkPrebuiltAstrea/DeviceIntelligenceNetworkPrebuiltAstrea.apk",
-    preprocessed: true,
-    presigned: true,
-    dex_preopt: {
-        enabled: false,
-    },
-    privileged: true,
-    product_specific: true,
-}
+// android_app_import {
+//     name: "DeviceIntelligenceNetworkPrebuiltAstrea",
+//     owner: "google",
+//     apk: "proprietary/product/priv-app/DeviceIntelligenceNetworkPrebuiltAstrea/DeviceIntelligenceNetworkPrebuiltAstrea.apk",
+//     preprocessed: true,
+//     presigned: true,
+//     dex_preopt: {
+//         enabled: false,
+//     },
+//     privileged: true,
+//     product_specific: true,
+// }
 
 android_app_import {
     name: "DevicePersonalizationAiAiPrebuiltPixel2024",
@@ -501,18 +501,18 @@ android_app_import {
     product_specific: true,
 }
 
-android_app_import {
-    name: "SCONE-v69510",
-    owner: "google",
-    apk: "proprietary/product/priv-app/SCONE-v69510/SCONE-v69510.apk",
-    preprocessed: true,
-    presigned: true,
-    dex_preopt: {
-        enabled: false,
-    },
-    privileged: true,
-    product_specific: true,
-}
+// android_app_import {
+//     name: "SCONE-v69510",
+//     owner: "google",
+//     apk: "proprietary/product/priv-app/SCONE-v69510/SCONE-v69510.apk",
+//     preprocessed: true,
+//     presigned: true,
+//     dex_preopt: {
+//         enabled: false,
+//     },
+//     privileged: true,
+//     product_specific: true,
+// }
 
 android_app_import {
     name: "SatelliteGateway-Phone-v91522000",
@@ -637,17 +637,17 @@ android_app_import {
     system_ext_specific: true,
 }
 
-android_app_import {
-    name: "MoseyApp",
-    owner: "google",
-    apk: "proprietary/system_ext/priv-app/MoseyApp/MoseyApp.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    privileged: true,
-    system_ext_specific: true,
-}
+// android_app_import {
+//     name: "MoseyApp",
+//     owner: "google",
+//     apk: "proprietary/system_ext/priv-app/MoseyApp/MoseyApp.apk",
+//     certificate: "platform",
+//     dex_preopt: {
+//         enabled: false,
+//     },
+//     privileged: true,
+//     system_ext_specific: true,
+// }
 
 android_app_import {
     name: "MyVerizonServices",
